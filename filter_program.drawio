@@ -1,0 +1,48 @@
+<mxfile host="65bd71144e">
+    <diagram id="DGFa1x4f9Q8ouzSawmVx" name="Page-1">
+        <mxGraphModel dx="1130" dy="643" grid="0" gridSize="12" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="700" background="#E6E6E6" math="0" shadow="1">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="339" value="filter program" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=0;fontSize=50;fontColor=#1C1C1C;labelBorderColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="308" y="42" width="413" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="354" style="edgeStyle=none;shape=flexArrow;rounded=1;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;shadow=1;labelBackgroundColor=default;strokeColor=#666666;fontFamily=Helvetica;fontSize=50;fontColor=#CC0000;endArrow=classic;fillColor=#f5f5f5;" parent="1" source="341" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="663.9411764705883" y="209.0588235294117" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="341" value="&lt;font color=&quot;#050505&quot; style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;enter &lt;/b&gt;the txt file to pandas&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=16;fillColor=#dae8fc;strokeColor=#6c8ebf;glass=0;rounded=1;align=center;gradientColor=default;" parent="1" vertex="1">
+                    <mxGeometry x="427" y="137" width="185" height="143.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="343" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;b style=&quot;font-size: 14px;&quot;&gt;&amp;nbsp;the result:&lt;/b&gt;&amp;nbsp;Filtered Image Folder&lt;/span&gt;" style="text;strokeColor=none;align=left;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;glass=0;labelBackgroundColor=none;fontSize=14;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="82" y="60" width="254" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="348" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=50;fontColor=#CC0000;shape=flexArrow;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=1;targetPerimeterSpacing=-2;shadow=1;" parent="1" source="344" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="425.11764705882365" y="211.41176470588243" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="344" value="&lt;strong&gt;Input Data the program receiv&lt;/strong&gt;:&amp;nbsp;&lt;br&gt;&lt;ul&gt;&lt;li&gt;input folder with images and txt file.&lt;/li&gt;&lt;li&gt;log file.&lt;/li&gt;&lt;li&gt;output floder.&lt;/li&gt;&lt;li&gt;number of seconds.(int)&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=#b85450;align=left;fillColor=#f8cecc;html=1;verticalAlign=top;whiteSpace=wrap;rounded=1;glass=0;labelBackgroundColor=none;fontSize=16;horizontal=1;textDirection=ltr;fontColor=#000000;gradientColor=default;" parent="1" vertex="1">
+                    <mxGeometry x="63" y="137" width="307" height="149" as="geometry"/>
+                </mxCell>
+                <mxCell id="347" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=16;fontColor=#050505;" parent="1" source="345" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="811" y="367.8823529411766" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="357" style="edgeStyle=none;shape=flexArrow;rounded=1;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;shadow=1;labelBackgroundColor=default;strokeColor=#666666;fontFamily=Helvetica;fontSize=50;fontColor=#CC0000;endArrow=classic;fillColor=#f5f5f5;" edge="1" parent="1" source="345">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="627" y="383" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="345" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;color: rgb(5, 5, 5); background-color: initial;&quot;&gt;filter :&lt;/span&gt;&lt;/div&gt;&lt;font color=&quot;#050505&quot; style=&quot;font-size: 16px;&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;font color=&quot;#050505&quot; style=&quot;font-size: 16px;&quot;&gt;sort the data by group and time.&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#050505&quot; style=&quot;font-size: 16px;&quot;&gt;group the data by idGroup.&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#050505&quot; style=&quot;font-size: 16px;&quot;&gt;create new series with the key = id_group, value = time .&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#050505&quot; style=&quot;font-size: 16px;&quot;&gt;make tamp variable namd previous_time equal to the tirst time of first group .&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#050505&quot; style=&quot;font-size: 16px;&quot;&gt;make new arr namd chosen_groups.&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#050505&quot; style=&quot;font-size: 16px;&quot;&gt;run on all series from index 1 and chek if time minus previous_time equal&amp;nbsp; or greater than&amp;nbsp;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;number of seconds we receiv from thr user.&lt;/span&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#050505&quot; style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;if is greter add the id group to&amp;nbsp;&lt;/span&gt;&lt;/font&gt;chosen_groups and make the previous_time&amp;nbsp;equal to the time.&lt;/li&gt;&lt;li&gt;result array namd chosen_groups&amp;nbsp;&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=16;fillColor=#fff2cc;strokeColor=#d6b656;glass=0;rounded=1;align=left;gradientColor=default;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="668.5" y="143" width="288.5" height="479" as="geometry"/>
+                </mxCell>
+                <mxCell id="346" value="&lt;font color=&quot;#050505&quot; style=&quot;font-size: 16px;&quot;&gt;run on&lt;/font&gt;&lt;span style=&quot;color: rgb(5, 5, 5); text-align: left;&quot;&gt;chosen_groups&lt;/span&gt;&lt;font color=&quot;#050505&quot; style=&quot;font-size: 16px;&quot;&gt;&lt;br&gt;&amp;nbsp;and &lt;b&gt;pull &lt;/b&gt;images from the folder by group id to the &lt;b&gt;destination folder&lt;/b&gt;.&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontSize=16;fillColor=#e1d5e7;strokeColor=#9673a6;glass=0;rounded=1;align=center;gradientColor=default;" parent="1" vertex="1">
+                    <mxGeometry x="431" y="316" width="191" height="145" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
