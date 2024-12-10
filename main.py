@@ -1,7 +1,23 @@
 import flet as ft
-from functions import filter_function
+from functions import filter_function 
+import time
+import os 
+import sys
+import signal
 
+
+     
 def main(page : ft.Page):
+    def handle_window_event(e: ft.ControlEvent):
+        if e.data == "close":
+            page.window.prevent_close=False
+            page.window.close()
+            try:
+                time.sleep(2)
+                sys.exit(0)
+            except SystemExit as e:
+                os.kill(os.getpid(),signal.SIGTERM)
+                
     page.title = 'filter program'
     page.window.width = 650
     page.window.height = 600
@@ -9,20 +25,30 @@ def main(page : ft.Page):
     page.window_maximizable =False
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     page.bgcolor = ft.Colors.BLUE_GREY_400
+    page.window.prevent_close=True
+    page.window.on_event=handle_window_event
+
+    
+
+
     
     #texts   
     title = ft.Text(value='Filter Program', size=35, color=ft.Colors.BLUE_GREY_50)
     source_folder_label = ft.Text('Source folder path',  width=300)
     txt_file_label = ft.Text("Txt file  path",width=300)
-    select_log_file_label = ft.Text("Log file  path", width=300)
     target_folder_label = ft.Text("Source destination path",width=300)
     butoon_text = ft.Text(value='Enter filter duration (in seconds)', size=12, color=ft.Colors.GREY_900)
     seconds = ft.Text(value=0, text_align="center", size=25 )
     status_text = ft.Text("")
+    
  
     progress_bar = ft.ProgressBar(width=400, value=0)
     
+    
+    
     #functions 
+    
+
     def pick_source_folder_result(e: ft.FilePickerResultEvent):   
             source_folder_label.value = e.path if e.path else "Source folder path"
             source_folder_label.update()
@@ -32,16 +58,6 @@ def main(page : ft.Page):
             target_folder_label.value = e.path if e.path else "Source destination path"
             target_folder_label.update()
             valid_button()
-             
-    def pick_log_file_result(e: ft.FilePickerResultEvent):
-          if e.files:            
-            select_log_file_label.value = e.files[0].path 
-            select_log_file_label.update()
-            valid_button()
-            return
-          select_log_file_label.value = 'Log file path'
-          select_log_file_label.update()
-          valid_button()
         
     def pick_txt_file_result(e: ft.FilePickerResultEvent):
        if e.files:     
@@ -54,7 +70,7 @@ def main(page : ft.Page):
        valid_button()
         
     def valid_button():
-        if txt_file_label.value !=  "Txt file  path" and source_folder_label.value != "Source folder path" and target_folder_label.value != 'Source destination path' and select_log_file_label.value != 'Log file path':
+        if txt_file_label.value !=  "Txt file  path" and source_folder_label.value != "Source folder path" and target_folder_label.value != 'Source destination path':
             filter_butoon.disabled=False
             filter_butoon.update()
         else:
@@ -73,12 +89,10 @@ def main(page : ft.Page):
                        
     pick_source_folder_dialog = ft.FilePicker(on_result=pick_source_folder_result)
     pick_txt_file_dialog = ft.FilePicker(on_result=pick_txt_file_result,)
-    pick_log_file_dialog = ft.FilePicker(on_result=pick_log_file_result,)
     pick_destination_folder_dialog = ft.FilePicker(on_result=pick_destination_folder_result)
     
     page.overlay.append(pick_source_folder_dialog)
     page.overlay.append(pick_destination_folder_dialog)
-    page.overlay.append(pick_log_file_dialog)
     page.overlay.append(pick_txt_file_dialog)
     
     #buttons
@@ -88,9 +102,6 @@ def main(page : ft.Page):
     txt_file_button = ft.ElevatedButton('select a txt file',icon=ft.Icons.TEXT_SNIPPET_ROUNDED,width=150)
     txt_file_button.on_click = lambda _: pick_txt_file_dialog.pick_files( allowed_extensions=["txt"])
     
-    log_file_button = ft.ElevatedButton('select a log file',icon=ft.Icons.FILE_PRESENT_SHARP,width=150)
-    log_file_button.on_click=lambda _: pick_log_file_dialog.pick_files( allowed_extensions=["bin"])
-    
     target_folder_butoon =ft.ElevatedButton('target folder', icon=ft.Icons.FOLDER_ROUNDED,width=150)
     target_folder_butoon.on_click=pick_destination_folder_dialog.get_directory_path
     
@@ -98,7 +109,7 @@ def main(page : ft.Page):
     plus_button = ft.IconButton(ft.Icons.ADD, on_click=plus_click)
     
     filter_butoon = ft.ElevatedButton('filter',icon=ft.Icons.FILTER_ALT_OUTLINED, disabled = True,width=100, )
-    filter_butoon.on_click=lambda _: filter_function(filter_butoon, source_folder_label.value, target_folder_label.value,  select_log_file_label.value, txt_file_label.value, seconds.value, progress_bar, status_text)
+    filter_butoon.on_click=lambda _: filter_function(filter_butoon, source_folder_label.value, target_folder_label.value,   txt_file_label.value, seconds.value, progress_bar, status_text)
     
     page.add(
        title , 
@@ -107,7 +118,6 @@ def main(page : ft.Page):
             [
             ft.Row([sourc_folder_butoon,source_folder_label],spacing=50,alignment=ft.MainAxisAlignment.CENTER),
             ft.Row([txt_file_button,txt_file_label],spacing=50,alignment=ft.MainAxisAlignment.CENTER),
-            ft.Row([log_file_button,select_log_file_label],spacing=50,alignment=ft.MainAxisAlignment.CENTER),
             ft.Row([target_folder_butoon,target_folder_label],spacing=50,alignment=ft.MainAxisAlignment.CENTER),
             ft.Divider( thickness=3, color=ft.Colors.BLUE_GREY_100),
             butoon_text, 
