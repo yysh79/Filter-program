@@ -1,16 +1,12 @@
-2024-12-10 12:05:06,417 - INFO - Assets path configured: C:\Users\yosef\Desktop\Filter-program\assets
-2024-12-10 12:05:06,417 - INFO - Starting up TCP server on localhost:63320
-2024-12-10 12:05:06,423 - INFO - Flet app has started...
-2024-12-10 12:05:06,681 - INFO - App session started
-2024-12-10 12:05:19,443 - INFO - C:\Users\yosef\Desktop\test filter program files\input\00000001.BIN copid successfully
-2024-12-10 12:05:19,463 - INFO - C:\Users\yosef\Desktop\test filter program files\input\front\2front00005.jpg.jpg copid successfully
-2024-12-10 12:05:19,463 - INFO - C:\Users\yosef\Desktop\test filter program files\input\front\2front00047.jpg.jpg copid successfully
-2024-12-10 12:05:19,463 - INFO - C:\Users\yosef\Desktop\test filter program files\input\front\2front00471.jpg copid successfully
-2024-12-10 12:05:19,465 - INFO - C:\Users\yosef\Desktop\test filter program files\input\front\2front00002.jpg.jpg copid successfully
-2024-12-10 12:05:19,466 - INFO - C:\Users\yosef\Desktop\test filter program files\input\front\2front04077.jpg.jpg copid successfully
-2024-12-10 12:05:19,466 - INFO - C:\Users\yosef\Desktop\test filter program files\input\front\2front00001.jpg.jpg copid successfully
-2024-12-10 12:05:19,468 - INFO - C:\Users\yosef\Desktop\test filter program files\input\front\2front02093.jpg.jpg copid successfully
-2024-12-10 12:05:19,469 - INFO - C:\Users\yosef\Desktop\test filter program files\input\front\2front00515.jpg.jpg copid successfully
-2024-12-10 12:05:19,469 - INFO - C:\Users\yosef\Desktop\test filter program files\input\right\2front00005.jpg.jpg copid successfully
-2024-12-10 12:05:19,470 - INFO - C:\Users\yosef\Desktop\test filter program files\input\right\2front00002.jpg.jpg copid successfully
-2024-12-10 12:05:19,471 - INFO - C:\Users\yosef\Desktop\test filter program files\input\right\2front00001.jpg.jpg copid successfully
+2024-12-12 15:25:34,347 - INFO - Assets path configured: C:\Users\yosef\Desktop\mian_filter_program\Filter-program\assets
+2024-12-12 15:25:34,347 - INFO - Starting up TCP server on localhost:57850
+2024-12-12 15:25:34,347 - INFO - Flet app has started...
+2024-12-12 15:25:34,347 - INFO - App URL: tcp://localhost:57850
+2024-12-12 15:25:34,347 - INFO - Starting Flet View app...
+2024-12-12 15:25:34,347 - INFO - Flet View found in: C:\Users\yosef\Desktop\mian_filter_program\Filter-program\venv\Lib\site-packages\flet\bin\flet\flet.exe
+2024-12-12 15:25:34,506 - INFO - App session started
+2024-12-12 15:25:50,786 - INFO - C:\Users\yosef\Desktop\test filter program files\input\00000001.BIN copid successfully
+2024-12-12 15:25:51,803 - INFO - C:\Users\yosef\Desktop\test filter program files\input\right\2front00005.jpg.jpg copid successfully
+2024-12-12 15:25:51,803 - INFO - C:\Users\yosef\Desktop\test filter program files\input\front\2front00005.jpg.jpg copid successfully
+2024-12-12 15:25:51,804 - INFO - C:\Users\yosef\Desktop\test filter program files\input\right\2front00001.jpg.jpg copid successfully
+2024-12-12 15:25:51,804 - INFO - C:\Users\yosef\Desktop\test filter program files\input\front\2front00001.jpg.jpg copid successfully
